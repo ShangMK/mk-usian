@@ -15,8 +15,10 @@ public class ItemController {
 
     @RequestMapping("findById")
     public TbItem findById( Long itemId){
+        System.out.println("wda");
         //sadasda
         TbItem tbItem=itemService.findByid(itemId);
         return tbItem;
     }
 }
+
