@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="94bbf360-acca-45ae-9c4d-e9bfde314913" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-eureka/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-eureka/src/main/java/Eureka/EurekaApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-eureka/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-eureka/src/test/java/Sd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-eureka/target/classes/Eureka/EurekaApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-eureka/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-eureka/target/test-classes/Sd.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbContentCategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbContentCategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbContentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbContentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemCatMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemCatMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemDescMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemDescMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemParamItemMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemParamItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemParamMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemParamMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbOrderItemMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbOrderItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbOrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbOrderShippingMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbOrderShippingMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbContentCategoryMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbContentCategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbContentMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbContentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbItemCatMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbItemCatMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbItemDescMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbItemDescMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbItemMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbItemParamItemMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbItemParamItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbItemParamMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbItemParamMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbOrderItemMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbOrderItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbOrderMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbOrderShippingMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbOrderShippingMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbUserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-mapper/target/classes/com/usian/mapper/TbUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbContentCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbContentCategoryExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbContentExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemCat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemCatExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemDesc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemDescExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemParamExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemParamItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemParamItemExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbOrderExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbOrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbOrderItemExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbOrderShipping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbOrderShippingExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbUserExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbContent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbContentCategory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbContentCategoryExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbContentCategoryExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbContentCategoryExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbContentCategoryExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbContentExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbContentExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbContentExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbContentExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemCat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemCatExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemCatExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemCatExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemCatExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemDesc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemDescExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemDescExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemDescExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemDescExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemParam.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemParamExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemParamExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemParamExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemParamExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemParamItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemParamItemExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemParamItemExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemParamItemExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbItemParamItemExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrderExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrderExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrderExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrderExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrderItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrderItemExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrderItemExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrderItemExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrderItemExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrderShipping.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrderShippingExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrderShippingExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrderShippingExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbOrderShippingExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbUserExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbUserExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbUserExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-pojo/target/classes/com/usian/pojo/TbUserExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-utils/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-utils/src/main/java/com/usian/utils/CookieUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-utils/src/main/java/com/usian/utils/IDUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-utils/src/main/java/com/usian/utils/JsonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-utils/src/main/java/com/usian/utils/MD5Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-utils/src/main/java/com/usian/utils/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-utils/target/classes/com/usian/utils/CookieUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-utils/target/classes/com/usian/utils/IDUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-utils/target/classes/com/usian/utils/JsonUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-utils/target/classes/com/usian/utils/MD5Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-utils/target/classes/com/usian/utils/Result.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-feign/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-feign/src/main/java/com/usian/feign/ItemFeign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-feign/target/classes/com/usian/feign/ItemFeign.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-service/src/main/java/com/UsianServiceApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/controller/ItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/service/ItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-service/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-service/target/classes/com/UsianServiceApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-service/target/classes/com/usian/controller/ItemController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-service/target/classes/com/usian/service/ItemService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-web/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-web/src/main/java/com/UsianWebApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-web/src/main/java/com/usian/controller/ItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-web/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-web/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-web/target/classes/com/UsianWebApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian-item-web/target/classes/com/usian/controller/ItemController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usianparent.iml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/common-mapper/target/" />
+    <ignored path="$PROJECT_DIR$/common-pojo/target/" />
+    <ignored path="$PROJECT_DIR$/common-eureka/target/" />
+    <ignored path="$PROJECT_DIR$/common-utils/target/" />
+    <ignored path="$PROJECT_DIR$/common-item-service/target/" />
+    <ignored path="$PROJECT_DIR$/usian-item-feign/target/" />
+    <ignored path="$PROJECT_DIR$/common-item-web/target/" />
+    <ignored path="$PROJECT_DIR$/usian-item-web/target/" />
+    <ignored path="$PROJECT_DIR$/usian-item-service/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbUserMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usian-item-feign/src/main/java/com/usian/feign/ItemFeign.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/service/ItemService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common-eureka/src/test/java/Sd.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/controller/ItemController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usian-item-service/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1089">
+              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usian-item-service/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1155">
+              <caret line="35" selection-start-line="27" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="WARN_ABOUT_CRLF" value="false" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/common-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/common-eureka/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/common-eureka/src/main/java/Eureka/EurekaApp.java" />
+        <option value="$PROJECT_DIR$/common-pojo/pom.xml" />
+        <option value="$PROJECT_DIR$/common-utils/pom.xml" />
+        <option value="$PROJECT_DIR$/common-utils/src/main/java/com/usian/utils/CookieUtils.java" />
+        <option value="$PROJECT_DIR$/common-item-service/pom.xml" />
+        <option value="$PROJECT_DIR$/common-item-service/src/main/java/com/CommonitemServiceApp.java" />
+        <option value="$PROJECT_DIR$/usian-item-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/usian-item-web/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/usian-item-web/src/main/java/com/UsianWebApp.java" />
+        <option value="$PROJECT_DIR$/usian-item-web/pom.xml" />
+        <option value="$PROJECT_DIR$/usian-item-web/src/main/java/com/usian/controller/ItemController.java" />
+        <option value="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemMapper.java" />
+        <option value="$PROJECT_DIR$/usian-item-feign/src/main/java/com/usian/feign/ItemFeign.java" />
+        <option value="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/controller/mapper/TbOrderMapper.java" />
+        <option value="$PROJECT_DIR$/common-mapper/pom.xml" />
+        <option value="$PROJECT_DIR$/usian-item-service/src/main/java/com/UsianServiceApp.java" />
+        <option value="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemCatMapper.java" />
+        <option value="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/controller/ItemController.java" />
+        <option value="$PROJECT_DIR$/usian-item-service/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/usian-item-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/service/ItemService.java" />
+        <option value="$PROJECT_DIR$/common-eureka/src/test/java/Sd.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\repository_p6" />
+        <option name="mavenHome" value="F:/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="F:\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="usian-parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="usian-parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15116279" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Factory2zuoye\usianparent\common-pojo\src\main\java\com\usian" />
+      <recent name="F:\Factory2zuoye\usianparent\common-mapper\src\main\java\com\usian" />
+      <recent name="F:\Factory2zuoye\usianparent\usian-item-service\src\main\java\com\usian\controller" />
+      <recent name="F:\Factory2zuoye\usianparent\usian-item-web\src\main\resources" />
+      <recent name="F:\Factory2zuoye\usianparent\usian-item-web\src\main\java" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+    <option name="contentProportion" value="0.20454545" />
+  </component>
+  <component name="RunManager" selected="Application.Sd">
+    <configuration name="Sd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Sd" />
+      <module name="commoneureka" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="commoneureka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Eureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="Eureka.EurekaApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsianServiceApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="usianitemservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.UsianServiceApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsianWebApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="usianitemweb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.UsianWebApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Sd" />
+        <item itemvalue="Spring Boot.UsianWebApp" />
+        <item itemvalue="Spring Boot.UsianServiceApp" />
+        <item itemvalue="Spring Boot.EurekaApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94bbf360-acca-45ae-9c4d-e9bfde314913" name="Default Changelist" comment="" />
+      <created>1617863681776</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617863681776</updated>
+      <workItem from="1617863682906" duration="5939000" />
+      <workItem from="1617873712770" duration="3857000" />
+      <workItem from="1617878702225" duration="258000" />
+      <workItem from="1617878964168" duration="120000" />
+      <workItem from="1617879087438" duration="1440000" />
+      <workItem from="1617886925405" duration="253000" />
+      <workItem from="1617931213922" duration="95000" />
+      <workItem from="1617937871702" duration="723000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="12685000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.42231947" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4182015" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32827735" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.37811485" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.49946696" weight="0.37053087" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.24946696" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20575693" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4182015" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32827735" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.37811485" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.49946696" visible="true" weight="0.37053087" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.24946696" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>tbItemMapper.selectByPrimaryKey((long)536563)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>tbItemMapper.selectByPrimaryKey((Long)536563)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>tbItemMapper.selectByPrimaryKey((long)456)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>tbItemMapper.selectByPrimaryKey((long)1)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>tbItemMapper.selectByPrimaryKey(563563)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/common-eureka/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemCatExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbOrderItemExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbOrder.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-utils/src/main/java/com/usian/utils/CookieUtils.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian-item-feign/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-eureka/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian-item-service/src/main/java/com/CommonitemServiceApp.java" />
+    <entry file="file://$PROJECT_DIR$/usian-item-web/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian-item-web/src/main/java/com/usian/service/ItemService.java" />
+    <entry file="file://$PROJECT_DIR$/common-utils/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian-item-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-utils/src/main/java/com/usian/utils/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="97" column="17" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-eureka/src/main/java/Eureka/EurekaApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian-item-web/src/main/java/com/UsianWebApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="107" column="66" lean-forward="true" selection-start-line="107" selection-start-column="66" selection-end-line="107" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbOrderShippingMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian-item-web/src/main/java/com/usian/controller/ItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian-item-service/src/main/java/com/UsianServiceApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbOrderItemMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemDescMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemParamItemMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbContentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemParamMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbOrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbItemCatMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemParamItemExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbContentCategoryExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbContent.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemCat.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemDesc.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemParam.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbOrderShippingExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbOrderShipping.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemParamItem.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbContentCategoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0.jar!/com/netflix/loadbalancer/LoadBalancerContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="373" selection-start-line="373" selection-end-line="373" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-mapper/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="51" column="35" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper/TbUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian-item-feign/src/main/java/com/usian/feign/ItemFeign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/service/ItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/controller/ItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian-item-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1089">
+          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian-item-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="35" selection-start-line="27" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-eureka/src/test/java/Sd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>commoneureka</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
