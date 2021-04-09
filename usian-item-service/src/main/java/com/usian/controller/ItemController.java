@@ -15,6 +15,7 @@ public class ItemController {
 
     @RequestMapping("findById")
     public TbItem findById( Long itemId){
+        //sadasda
         TbItem tbItem=itemService.findByid(itemId);
         return tbItem;
     }
