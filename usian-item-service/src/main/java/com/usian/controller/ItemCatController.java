@@ -1,24 +1,21 @@
 package com.usian.controller;
 
-import com.usian.pojo.TbItem;
+import com.usian.service.ItemCatService;
 import com.usian.service.ItemService;
-import com.usian.utils.PageResult;
 import com.usian.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("service")
-public class ItemController {
+@RequestMapping("itemcat")
+public class ItemCatController {
     @Autowired
-    ItemService itemService;
+    ItemCatService itemCatService;
 
-
-    @RequestMapping("selectTbItemAllByPage")
-    public Result selectTbItemAllByPage(Integer page){
-      return itemService.selectTbItemAllByPage(page);
+    @RequestMapping("selectItemCategoryByParentId")
+    public Result selectItemCategoryByParentId(){
+      return itemCatService.selectItemCategoryByParentId();
     }
-
 }
 

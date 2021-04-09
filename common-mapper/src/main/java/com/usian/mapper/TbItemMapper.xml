@@ -305,6 +305,6 @@
 
 
   <select id="findall" resultType="com.usian.pojo.TbItem">
-    select * from  from tb_item
+    select * from   tb_item
   </select>
 </mapper>

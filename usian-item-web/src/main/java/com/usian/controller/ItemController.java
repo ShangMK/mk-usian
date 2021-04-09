@@ -14,8 +14,8 @@ public class ItemController {
     ItemFeign itemFeign;
 
     @RequestMapping("selectTbItemAllByPage")
-    public PageResult selectTbItemAllByPage(@RequestParam Integer page){
-       return itemFeign.selectTbItemAllByPage(page);
+    public Result selectTbItemAllByPage(@RequestParam Integer page){
+        return itemFeign.selectTbItemAllByPage(page);
     }
 
 }
