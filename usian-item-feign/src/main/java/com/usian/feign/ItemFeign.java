@@ -13,5 +13,6 @@ public interface ItemFeign {
 
     @RequestMapping("service/selectTbItemAllByPage")
     Result selectTbItemAllByPage(@RequestParam Integer page);
-
+    @RequestMapping("itemcat/selectItemCategoryByParentId")
+    Result selectItemCategoryByParentId();
 }
