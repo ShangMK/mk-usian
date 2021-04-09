@@ -10,6 +10,7 @@ public class ItemService {
     @Autowired
     TbItemMapper tbItemMapper;
     public TbItem findByid(Long itemId) {
+        System.out.println("测试");
         return tbItemMapper.selectByPrimaryKey(itemId);
     }
 }
