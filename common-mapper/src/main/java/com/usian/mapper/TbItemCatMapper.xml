@@ -255,4 +255,8 @@
       updated = #{updated,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+  <select id="findall" resultType="com.usian.pojo.TbItemCat">
+    select * from tb_item_cat
+  </select>
 </mapper>

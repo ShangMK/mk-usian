@@ -25,8 +25,7 @@ public class ItemCatService {
     public Result selectItemCategoryByParentId() {
         Result result = new Result();
         try {
-            TbItemCatExample tbItemExample = new TbItemCatExample();
-            List<TbItemCat> itemCats = tbItemCatMapper.selectByExample(tbItemExample);
+            List<TbItemCat> itemCats = tbItemCatMapper.findall();
             result.setStatus(200);
             result.setMsg("成功");
             result.setData(itemCats);
