@@ -1,5 +1,6 @@
 package com.usian.mapper;
 
+import com.github.pagehelper.Page;
 import com.usian.pojo.TbItem;
 import com.usian.pojo.TbItemExample;
 import org.apache.ibatis.annotations.Param;
@@ -28,4 +29,6 @@ public interface TbItemMapper {
     int updateByPrimaryKeySelective(TbItem record);
 
     int updateByPrimaryKey(TbItem record);
+
+    Page<TbItem> findall();
 }
