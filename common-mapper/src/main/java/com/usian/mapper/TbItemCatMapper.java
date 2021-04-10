@@ -1,5 +1,6 @@
 package com.usian.mapper;
 
+import com.usian.pojo.ItemCatId;
 import com.usian.pojo.TbItemCat;
 import com.usian.pojo.TbItemCatExample;
 import org.apache.ibatis.annotations.Param;
@@ -29,5 +30,7 @@ public interface TbItemCatMapper {
 
     int updateByPrimaryKey(TbItemCat record);
 
-    List<TbItemCat> findall();
+    List<TbItemCat> findall(@Param("id") Integer id);
+
+
 }

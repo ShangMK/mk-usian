@@ -258,5 +258,8 @@
 
   <select id="findall" resultType="com.usian.pojo.TbItemCat">
     select * from tb_item_cat
+      where `parent_id`=#{id}
   </select>
+
+
 </mapper>

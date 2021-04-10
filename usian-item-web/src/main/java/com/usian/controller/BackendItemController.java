@@ -9,19 +9,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("backend/itemCategory")
-public class ItemCatController {
+@RequestMapping("backend/itemParam")
+public class BackendItemController {
     @Autowired
     ItemFeign itemFeign;
 
-
-    @RequestMapping("selectItemCategoryByParentId")
-    public Result selectItemCategoryByParentId(Integer id){
-        if (id==null){
-            return itemFeign .selectItemCategoryByParentId(0);
-        }
-
-        return itemFeign .selectItemCategoryByParentId(id);
+    @RequestMapping("selectItemParamByItemCatId/{id}")
+    public Result selectItemParamByItemCatId(@PathVariable Integer id){
+        return itemFeign .selectItemParamByItemCatId(id);
     }
 
 

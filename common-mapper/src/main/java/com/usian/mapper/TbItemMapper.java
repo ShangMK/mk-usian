@@ -31,4 +31,6 @@ public interface TbItemMapper {
     int updateByPrimaryKey(TbItem record);
 
     Page<TbItem> findall();
+
+    void insertbyprimarykey(TbItem tbItem);
 }

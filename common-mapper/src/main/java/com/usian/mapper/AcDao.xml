@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.usian.mapper.AcDao">
+    <select id="findbyid" resultType="com.usian.pojo.ItemCatId">
+SELECT t1.id,concat(t1.id,t2.id,t3.id) itemCatId,t1.created,t1.updated,t2.*,t3.*
+FROM `tb_item_cat` t1,`tb_item_cat` t2,`tb_item_cat` t3
+where t1.id=#{id} and t2.id=t1.parent_id and t3.id=t2.parent_id
+  </select>
+    <select id="findbyparentid" resultType="com.usian.pojo.TbItemCat">
+    select *
+    from tb_item_cat
+      where `id`=#{id}
+  </select>
+</mapper>
