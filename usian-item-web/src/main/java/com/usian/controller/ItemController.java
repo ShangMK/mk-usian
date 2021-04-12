@@ -15,19 +15,22 @@ public class ItemController {
     ItemFeign itemFeign;
 
     @RequestMapping("selectTbItemAllByPage")
-    public Result selectTbItemAllByPage(@RequestParam Integer page){
-        return itemFeign.selectTbItemAllByPage(page);
+    public Result selectTbItemAllByPage(@RequestParam(defaultValue = "1") Integer page,
+                                        @RequestParam(defaultValue = "5") Integer rows){
+        return itemFeign.selectTbItemAllByPage(page,rows);
     }
     @RequestMapping("insertTbItem")
     public Result insertTbItem(@RequestParam Integer cid,String title,String sellPoint,Integer price,Integer num,String desc,String itemParams){
         TbItem tbItem = new TbItem();
-        tbItem.setCid(Long.parseLong(cid.toString()));
-        tbItem.setTitle(title+"-"+desc);
-        tbItem.setSellPoint(sellPoint);
-        tbItem.setPrice(Long.parseLong(price.toString()));
-        tbItem.setNum(num);
-        return itemFeign.insertTbItem(tbItem);
+        if (cid!=null){tbItem.setCid(Long.parseLong(cid.toString()));}
+        if (title!=null){ tbItem.setTitle(title);}
+        if (sellPoint!=null){ tbItem.setSellPoint(sellPoint);}
+        if (num!=null){ tbItem.setNum(num);}
+        if (price!=null){ tbItem.setPrice(Long.parseLong(price.toString()));}
+
+        return itemFeign.insertTbItem(tbItem,desc,itemParams);
     }
+
     @RequestMapping("updateTbItem")
     public Result updateTbItem(@RequestParam Long id,Integer cid,String title,String sellPoint,Integer price,Integer num,String desc,String itemParams){
         TbItem tbItem = new TbItem();
@@ -37,7 +40,6 @@ public class ItemController {
         if (sellPoint!=null){ tbItem.setSellPoint(sellPoint);}
         if (num!=null){ tbItem.setNum(num);}
         if (price!=null){ tbItem.setPrice(Long.parseLong(price.toString()));}
-        if (desc!=null){tbItem.setBarcode(desc);}
         return itemFeign.updateTbItem(tbItem);
     }
     @RequestMapping("preUpdateItem")

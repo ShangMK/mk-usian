@@ -7,6 +7,7 @@ import com.usian.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -17,14 +18,14 @@ public class ItemController {
 
 
     @RequestMapping("selectTbItemAllByPage")
-    public Result selectTbItemAllByPage(Integer page){
-      return itemService.selectTbItemAllByPage(page);
+    public Result selectTbItemAllByPage(Integer page,Integer rows){
+      return itemService.selectTbItemAllByPage(page,rows);
     }
 
 
     @RequestMapping("insertTbItem")
-    public Result insertTbItem(@RequestBody TbItem tbItem){
-      return itemService.insertTbItem(tbItem);
+    public Result insertTbItem(@RequestBody TbItem tbitem,String desc,String itemParams){
+      return itemService.insertTbItem(tbitem,desc,itemParams);
     }
 
     @RequestMapping("updateTbItem")

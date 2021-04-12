@@ -2,19 +2,19 @@ package com.usian.service;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.usian.mapper.TbItemCatMapper;
 import com.usian.mapper.TbItemDescMapper;
 import com.usian.mapper.TbItemMapper;
-import com.usian.pojo.ItemPreUpdate;
-import com.usian.pojo.TbItem;
-import com.usian.pojo.TbItemCat;
-import com.usian.pojo.TbItemDesc;
+import com.usian.mapper.TbItemParamItemMapper;
+import com.usian.pojo.*;
 import com.usian.utils.PageResult;
 import com.usian.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class ItemService {
@@ -24,17 +24,25 @@ public class ItemService {
     TbItemCatMapper tbItemCatMapper;
     @Autowired
     TbItemDescMapper tbItemDescMapper;
+    @Autowired
+    TbItemParamItemMapper tbItemParamItemMapper;
 
-
-    public Result selectTbItemAllByPage(Integer page) {
+    public Result selectTbItemAllByPage(Integer page,Integer rows) {
         Result result = new Result();
         try {
-            PageHelper.startPage(page,5);
-            Page<TbItem> page1=tbItemMapper.findall();
+            PageHelper.startPage(page,rows);
+            TbItemExample tbItemExample=new TbItemExample();
+            tbItemExample.setOrderByClause("updated desc");
+            TbItemExample.Criteria criteria = tbItemExample.createCriteria();
+            criteria.andStatusEqualTo((byte)1);
+            List<TbItem> tbItems = tbItemMapper.selectByExample(tbItemExample);
+            PageInfo<TbItem> tbItemPageInfo = new PageInfo<>(tbItems);
+
+            /*Page<TbItem> page1=tbItemMapper.findall();*/
             PageResult pageResult = new PageResult();
             pageResult.setPageIndex(page);
-            pageResult.setResult(page1.getResult());
-            pageResult.setTotalPage(page1.getTotal());
+            pageResult.setResult(tbItemPageInfo.getList());
+            pageResult.setTotalPage(tbItemPageInfo.getTotal());
             result.setStatus(200);
             result.setMsg("成功");
             result.setData(pageResult);
@@ -46,29 +54,31 @@ public class ItemService {
         return result;
     }
 
-    public Result insertTbItem(TbItem tbItem) {
-        Result result = new Result();
+    public Result insertTbItem(TbItem tbItem,String desc,String itemParams) {
         try {
             tbItem.setCreated(new Date());
             tbItem.setUpdated(new Date());
             tbItem.setStatus((byte)1);
-            tbItemMapper.insertbyprimarykey(tbItem);
+            tbItemMapper.insertSelective(tbItem);
 
-            String substring = tbItem.getTitle().substring(tbItem.getTitle().indexOf("-"));
             TbItemDesc tbItemDesc = new TbItemDesc();
             tbItemDesc.setItemId(tbItem.getId());
-            tbItemDesc.setItemDesc(substring);
+            tbItemDesc.setItemDesc(desc);
             tbItemDesc.setCreated(new Date());
             tbItemDesc.setUpdated(new Date());
             tbItemDescMapper.insertSelective(tbItemDesc);
-            result.setStatus(200);
-            result.setMsg("成功");
+
+            TbItemParamItem tbItemParamItem = new TbItemParamItem();
+            tbItemParamItem.setItemId(tbItem.getId());
+            tbItemParamItem.setParamData(itemParams);
+            tbItemParamItem.setCreated(new Date());
+            tbItemParamItem.setUpdated(new Date());
+            tbItemParamItemMapper.insertSelective(tbItemParamItem);
+            return Result.ok("成功");
         }
         catch (Exception e){
-            result.setStatus(400);
-            result.setMsg("错误");
+            return Result.error("失败");
         }
-        return result;
     }
 
     public Result preUpdateItem(Long itemId) {
@@ -123,6 +133,10 @@ public class ItemService {
         try {
             tbItemMapper.deleteByPrimaryKey(itemId);
             tbItemDescMapper.deleteByPrimaryKey(itemId);
+            TbItemParamItemExample tbItemParamItemExample = new TbItemParamItemExample();
+            TbItemParamItemExample.Criteria criteria = tbItemParamItemExample.createCriteria();
+            criteria.andItemIdEqualTo(itemId);
+            tbItemParamItemMapper.deleteByExample(tbItemParamItemExample);
             result.setStatus(200);
             result.setMsg("成功");
         }
