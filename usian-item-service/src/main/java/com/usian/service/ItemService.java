@@ -56,17 +56,17 @@ public class ItemService {
 
     public Result insertTbItem(TbItem tbItem,String desc,String itemParams) {
         try {
-            tbItem.setCreated(new Date());
-            tbItem.setUpdated(new Date());
-            tbItem.setStatus((byte)1);
-            tbItemMapper.insertSelective(tbItem);
-
             TbItemDesc tbItemDesc = new TbItemDesc();
             tbItemDesc.setItemId(tbItem.getId());
             tbItemDesc.setItemDesc(desc);
             tbItemDesc.setCreated(new Date());
             tbItemDesc.setUpdated(new Date());
             tbItemDescMapper.insertSelective(tbItemDesc);
+
+            tbItem.setCreated(new Date());
+            tbItem.setUpdated(new Date());
+            tbItem.setStatus((byte)1);
+            tbItemMapper.insertSelective(tbItem);
 
             TbItemParamItem tbItemParamItem = new TbItemParamItem();
             tbItemParamItem.setItemId(tbItem.getId());

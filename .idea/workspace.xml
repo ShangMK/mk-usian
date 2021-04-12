@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="94bbf360-acca-45ae-9c4d-e9bfde314913" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian-item-feign/src/main/java/com/usian/feign/ItemFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian-item-feign/src/main/java/com/usian/feign/ItemFeign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian-item-feign/target/classes/com/usian/feign/ItemFeign.class" beforeDir="false" afterPath="$PROJECT_DIR$/usian-item-feign/target/classes/com/usian/feign/ItemFeign.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/service/ItemCatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/service/ItemCatService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/service/ItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian-item-service/target/classes/com/usian/controller/ItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/usian-item-service/target/classes/com/usian/controller/ItemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian-item-service/target/classes/com/usian/service/ItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/usian-item-service/target/classes/com/usian/service/ItemService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian-item-web/src/main/java/com/usian/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian-item-web/src/main/java/com/usian/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian-item-web/target/classes/com/usian/controller/ItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/usian-item-web/target/classes/com/usian/controller/ItemController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,13 +62,27 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/service/ItemService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="67" column="46" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+            <state relative-caret-position="330">
+              <caret line="63" column="44" lean-forward="true" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#selectTbItemAllByPage#0;class#ItemService#0" />
                 <element signature="method#preUpdateItem#0;class#ItemService#0" />
                 <element signature="method#updateTbItem#0;class#ItemService#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usian-item-web/src/main/java/com/UsianWebApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#407#408#0" expanded="true" />
+                <element signature="e#469#470#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -590,7 +595,7 @@
       <workItem from="1618035988377" duration="31000" />
       <workItem from="1618137550078" duration="91000" />
       <workItem from="1618187653430" duration="6880000" />
-      <workItem from="1618198381656" duration="585000" />
+      <workItem from="1618198381656" duration="850000" />
     </task>
     <task id="LOCAL-00001" summary="上传">
       <created>1617940494538</created>
@@ -655,11 +660,18 @@
       <option name="project" value="LOCAL" />
       <updated>1618034037222</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="上传4">
+      <created>1618199120534</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1618199120534</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58630000" />
+    <option name="totallyTimeSpent" value="58895000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -672,6 +684,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28464818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -761,9 +774,9 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/service/ItemService.java</url>
-          <line>58</line>
+          <line>63</line>
           <properties />
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -815,17 +828,9 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>tbItemCatMapper.findbyparentid(String.valueOf(two));</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemParam.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbOrderShippingExample.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1433,18 +1438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usian-item-web/src/main/java/com/UsianWebApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.8/pagehelper-5.1.8.jar!/com/github/pagehelper/PageInfo.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1490,17 +1483,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usian-item-web/src/main/java/com/usian/controller/ItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian-item-web/src/main/java/com/usian/controller/ItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -1514,10 +1507,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/usian-item-web/src/main/java/com/UsianWebApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-pojo/src/main/java/com/usian/pojo/TbItemDesc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/service/ItemService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="67" column="46" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+        <state relative-caret-position="330">
+          <caret line="63" column="44" lean-forward="true" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#selectTbItemAllByPage#0;class#ItemService#0" />
