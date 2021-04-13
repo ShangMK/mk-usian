@@ -1,4 +1,3 @@
-/*
 package com.usian.utils;
 
 import com.google.gson.Gson;
@@ -10,11 +9,6 @@ import com.qiniu.storage.Configuration;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.storage.model.DefaultPutRet;
 import com.qiniu.util.Auth;
-
-*/
-/**
- * 七牛云工具类
- *//*
 
 public class QiniuUtils {
     public  static String accessKey = "ZBGqYuNnzYEbd0Zu48MfHNIeLa4PNrOE5_UkhbkZ";
@@ -85,4 +79,3 @@ public class QiniuUtils {
         }
     }
 }
-*/

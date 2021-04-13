@@ -20,16 +20,22 @@ public class ItemController {
         return itemFeign.selectTbItemAllByPage(page,rows);
     }
     @RequestMapping("insertTbItem")
-    public Result insertTbItem(@RequestParam Integer cid,String title,String sellPoint,Integer price,Integer num,String desc,String itemParams){
+    public Result insertTbItem(@RequestParam Integer cid,String image,String title,String sellPoint,Integer price,Integer num,String desc,String itemParams){
         TbItem tbItem = new TbItem();
         if (cid!=null){tbItem.setCid(Long.parseLong(cid.toString()));}
         if (title!=null){ tbItem.setTitle(title);}
         if (sellPoint!=null){ tbItem.setSellPoint(sellPoint);}
         if (num!=null){ tbItem.setNum(num);}
         if (price!=null){ tbItem.setPrice(Long.parseLong(price.toString()));}
-
+        if (image != null) { tbItem.setImage(image); }
         return itemFeign.insertTbItem(tbItem,desc,itemParams);
     }
+/*
+    @RequestMapping("insertTbItem")
+    public Result insertTbItem(@RequestBody TbItem tbItem,@RequestParam String itemParams,@RequestParam String desc){
+        return itemFeign.insertTbItem(tbItem,desc,itemParams);
+    }
+*/
 
     @RequestMapping("updateTbItem")
     public Result updateTbItem(@RequestParam Long id,Integer cid,String title,String sellPoint,Integer price,Integer num,String desc,String itemParams){
@@ -40,7 +46,7 @@ public class ItemController {
         if (sellPoint!=null){ tbItem.setSellPoint(sellPoint);}
         if (num!=null){ tbItem.setNum(num);}
         if (price!=null){ tbItem.setPrice(Long.parseLong(price.toString()));}
-        return itemFeign.updateTbItem(tbItem);
+        return itemFeign.updateTbItem(tbItem,desc,itemParams);
     }
     @RequestMapping("preUpdateItem")
     public Result preUpdateItem(Long itemId){

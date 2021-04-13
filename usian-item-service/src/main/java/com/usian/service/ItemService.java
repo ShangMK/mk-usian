@@ -8,6 +8,7 @@ import com.usian.mapper.TbItemDescMapper;
 import com.usian.mapper.TbItemMapper;
 import com.usian.mapper.TbItemParamItemMapper;
 import com.usian.pojo.*;
+import com.usian.utils.IDUtils;
 import com.usian.utils.PageResult;
 import com.usian.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,24 +56,28 @@ public class ItemService {
     }
 
     public Result insertTbItem(TbItem tbItem,String desc,String itemParams) {
+        Date date = new Date();
         try {
-            TbItemDesc tbItemDesc = new TbItemDesc();
-            tbItemDesc.setItemId(tbItem.getId());
-            tbItemDesc.setItemDesc(desc);
-            tbItemDesc.setCreated(new Date());
-            tbItemDesc.setUpdated(new Date());
-            tbItemDescMapper.insertSelective(tbItemDesc);
-
-            tbItem.setCreated(new Date());
-            tbItem.setUpdated(new Date());
+            long id = IDUtils.genItemId();
+            tbItem.setId(id);
+            tbItem.setCreated(date);
+            tbItem.setUpdated(date);
             tbItem.setStatus((byte)1);
             tbItemMapper.insertSelective(tbItem);
 
+
+            TbItemDesc tbItemDesc = new TbItemDesc();
+            tbItemDesc.setItemId(id);
+            tbItemDesc.setItemDesc(desc);
+            tbItemDesc.setCreated(date);
+            tbItemDesc.setUpdated(date);
+            tbItemDescMapper.insertSelective(tbItemDesc);
+
             TbItemParamItem tbItemParamItem = new TbItemParamItem();
-            tbItemParamItem.setItemId(tbItem.getId());
+            tbItemParamItem.setItemId(id);
             tbItemParamItem.setParamData(itemParams);
-            tbItemParamItem.setCreated(new Date());
-            tbItemParamItem.setUpdated(new Date());
+            tbItemParamItem.setCreated(date);
+            tbItemParamItem.setUpdated(date);
             tbItemParamItemMapper.insertSelective(tbItemParamItem);
             return Result.ok("成功");
         }
@@ -83,15 +88,26 @@ public class ItemService {
 
     public Result preUpdateItem(Long itemId) {
         Result result = new Result();
+        ItemPreUpdate itemPreUpdate = new ItemPreUpdate();
         try {
-            TbItemDesc tbItemDesc = tbItemDescMapper.selectByPrimaryKey(itemId);
             TbItem tbItem = tbItemMapper.selectByPrimaryKey(itemId);
-            TbItemCat tbItemCat = tbItemCatMapper.selectByPrimaryKey(tbItem.getCid());
-            ItemPreUpdate itemPreUpdate = new ItemPreUpdate();
             itemPreUpdate.setItem(tbItem);
+
+            TbItemCat tbItemCat = tbItemCatMapper.selectByPrimaryKey(tbItem.getCid());
             itemPreUpdate.setItemCat(tbItemCat.getName());
+
+            TbItemDesc tbItemDesc = tbItemDescMapper.selectByPrimaryKey(itemId);
             itemPreUpdate.setItemDesc(tbItemDesc.getItemDesc());
-            itemPreUpdate.setItemParamItem("length");
+
+            TbItemParamItemExample tbItemParamItemExample = new TbItemParamItemExample();
+            TbItemParamItemExample.Criteria criteria = tbItemParamItemExample.createCriteria();
+            TbItemParamItemExample.Criteria criteria1 = criteria.andItemIdEqualTo(itemId);
+            List<TbItemParamItem> tbItemParamItems = tbItemParamItemMapper.selectByExampleWithBLOBs(tbItemParamItemExample);
+            if (tbItemParamItems.size() > 0) {
+                itemPreUpdate.setItemParamItem(tbItemParamItems.get(0).getParamData());
+            }else {
+                itemPreUpdate.setItemParamItem("");
+            }
             result.setStatus(200);
             result.setMsg("成功");
             result.setData(itemPreUpdate);
@@ -103,21 +119,30 @@ public class ItemService {
         return result;
     }
 
-    public Result updateTbItem(TbItem tbItem) {
+    public Result updateTbItem(TbItem tbItem,String desc,String itemParams) {
         Result result = new Result();
+        Date date = new Date();
         try {
-            tbItem.setUpdated(new Date());
-            tbItem.setStatus((byte)1);
+            tbItem.setUpdated(date);
             tbItemMapper.updateByPrimaryKeySelective(tbItem);
-            if (tbItem.getBarcode() != null) {
-                TbItemDesc tbItemDesc = new TbItemDesc();
-                tbItemDesc.setItemId(tbItem.getId());
-                tbItemDesc.setItemDesc(tbItem.getBarcode());
-                tbItemDesc.setCreated(new Date());
-                tbItemDesc.setUpdated(new Date());
-                tbItemDescMapper.updateByPrimaryKeySelective(tbItemDesc);
 
-            }
+
+            TbItemDesc tbItemDesc = new TbItemDesc();
+            tbItemDesc.setItemId(tbItem.getId());
+            tbItemDesc.setItemDesc(desc);
+            tbItemDesc.setUpdated(date);
+            tbItemDescMapper.updateByPrimaryKeySelective(tbItemDesc);
+
+            TbItemParamItemExample tbItemParamItemExample = new TbItemParamItemExample();
+            TbItemParamItemExample.Criteria criteria = tbItemParamItemExample.createCriteria();
+            TbItemParamItemExample.Criteria criteria1 = criteria.andItemIdEqualTo(tbItem.getId());
+            List<TbItemParamItem> tbItemParamItems = tbItemParamItemMapper.selectByExampleWithBLOBs(tbItemParamItemExample);
+            TbItemParamItem tbItemParamItem = new TbItemParamItem();
+            tbItemParamItem.setParamData(itemParams);
+            tbItemParamItem.setUpdated(date);
+            tbItemParamItem.setId(tbItemParamItems.get(0).getId());
+            tbItemParamItemMapper.updateByPrimaryKeySelective(tbItemParamItem);
+
             result.setStatus(200);
             result.setMsg("成功");
         }
@@ -131,12 +156,10 @@ public class ItemService {
     public Result deleteItemById(Long itemId) {
         Result result = new Result();
         try {
-            tbItemMapper.deleteByPrimaryKey(itemId);
-            tbItemDescMapper.deleteByPrimaryKey(itemId);
-            TbItemParamItemExample tbItemParamItemExample = new TbItemParamItemExample();
-            TbItemParamItemExample.Criteria criteria = tbItemParamItemExample.createCriteria();
-            criteria.andItemIdEqualTo(itemId);
-            tbItemParamItemMapper.deleteByExample(tbItemParamItemExample);
+            TbItem tbItem = new TbItem();
+            tbItem.setId(itemId);
+            tbItem.setStatus((byte)0);
+            tbItemMapper.updateByPrimaryKeySelective(tbItem);
             result.setStatus(200);
             result.setMsg("成功");
         }

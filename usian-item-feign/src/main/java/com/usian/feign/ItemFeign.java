@@ -28,7 +28,7 @@ public interface ItemFeign {
     Result preUpdateItem(@RequestBody Long itemId);
 
     @RequestMapping("service/updateTbItem")
-    Result updateTbItem(@RequestBody TbItem tbItem);
+    Result updateTbItem(@RequestBody TbItem tbItem,@RequestParam String desc,@RequestParam String itemParams);
 
     @RequestMapping("service/deleteItemById")
     Result deleteItemById(@RequestBody Long itemId);

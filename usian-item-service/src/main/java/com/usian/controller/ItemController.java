@@ -24,13 +24,13 @@ public class ItemController {
 
 
     @RequestMapping("insertTbItem")
-    public Result insertTbItem(@RequestBody TbItem tbitem,String desc,String itemParams){
+    public Result insertTbItem(@RequestBody TbItem tbitem,@RequestParam String desc,@RequestParam String itemParams){
       return itemService.insertTbItem(tbitem,desc,itemParams);
     }
 
     @RequestMapping("updateTbItem")
-    public Result updateTbItem(@RequestBody TbItem tbItem){
-      return itemService.updateTbItem(tbItem);
+    public Result updateTbItem(@RequestBody TbItem tbitem,@RequestParam String desc,@RequestParam String itemParams){
+      return itemService.updateTbItem(tbitem,desc,itemParams);
     }
 
     @RequestMapping("preUpdateItem")
