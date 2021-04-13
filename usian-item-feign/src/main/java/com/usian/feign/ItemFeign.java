@@ -1,6 +1,8 @@
 package com.usian.feign;
 
 
+import com.usian.pojo.TbContent;
+import com.usian.pojo.TbContentCategory;
 import com.usian.pojo.TbItem;
 import com.usian.utils.PageResult;
 import com.usian.utils.Result;
@@ -40,4 +42,31 @@ public interface ItemFeign {
 
     @RequestMapping("itemparam/selectItemParamAll")
     PageResult selectItemParamAll();
+
+    @RequestMapping("itemparam/insertItemParam")
+    Result insertItemParam(@RequestParam Long itemCatId,@RequestParam String paramData);
+
+    @RequestMapping("itemparam/deleteItemParamById")
+    Result deleteItemParamById(@RequestParam Long id);
+
+    @RequestMapping("contentcategory/selectContentCategoryByParentId")
+    Result selectContentCategoryByParentId(@RequestParam Long id);
+
+    @RequestMapping("contentcategory/selectTbContentAllByCategoryId")
+    Result selectTbContentAllByCategoryId(@RequestParam Long categoryId);
+
+    @RequestMapping("contentcategory/insertTbContent")
+    Result insertTbContent(@RequestBody TbContent tbContent);
+
+    @RequestMapping("contentcategory/deleteContentByIds")
+    Result deleteContentByIds(@RequestParam Long ids);
+
+    @RequestMapping("contentcategory/insertContentCategory")
+    Result insertContentCategory(@RequestBody TbContentCategory tbContentCategory);
+
+    @RequestMapping("contentcategory/updateContentCategory")
+    Result updateContentCategory(@RequestBody TbContentCategory tbContentCategory);
+
+    @RequestMapping("contentcategory/deleteContentCategoryById")
+    Result deleteContentCategoryById(@RequestParam Long categoryId);
 }

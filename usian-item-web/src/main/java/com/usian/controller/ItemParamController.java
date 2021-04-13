@@ -16,45 +16,21 @@ public class ItemParamController {
     ItemFeign itemFeign;
 
     @RequestMapping("selectItemParamAll")
-    public PageResult selectTbItemAllByPage(){
-        return itemFeign.selectItemParamAll();
+    public Result selectTbItemAllByPage(){
+        PageResult pageResult = itemFeign.selectItemParamAll();
+        if (pageResult != null) {
+            return Result.ok(pageResult);
+        } else {
+            return Result.error("错误");
+        }
     }
-   /* @RequestMapping("insertTbItem")
-    public Result insertTbItem(@RequestParam Integer cid,String image,String title,String sellPoint,Integer price,Integer num,String desc,String itemParams){
-        TbItem tbItem = new TbItem();
-        if (cid!=null){tbItem.setCid(Long.parseLong(cid.toString()));}
-        if (title!=null){ tbItem.setTitle(title);}
-        if (sellPoint!=null){ tbItem.setSellPoint(sellPoint);}
-        if (num!=null){ tbItem.setNum(num);}
-        if (price!=null){ tbItem.setPrice(Long.parseLong(price.toString()));}
-        if (image != null) { tbItem.setImage(image); }
-        return itemFeign.insertTbItem(tbItem,desc,itemParams);
+    @RequestMapping("insertItemParam")
+    public Result insertItemParam(Long itemCatId,String paramData){
+        return itemFeign.insertItemParam(itemCatId, paramData);
     }
-*//*
-    @RequestMapping("insertTbItem")
-    public Result insertTbItem(@RequestBody TbItem tbItem,@RequestParam String itemParams,@RequestParam String desc){
-        return itemFeign.insertTbItem(tbItem,desc,itemParams);
+    @RequestMapping("deleteItemParamById")
+    public Result deleteItemParamById(Long id){
+        return itemFeign.deleteItemParamById(id);
     }
-*//*
 
-    @RequestMapping("updateTbItem")
-    public Result updateTbItem(@RequestParam Long id,Integer cid,String title,String sellPoint,Integer price,Integer num,String desc,String itemParams){
-        TbItem tbItem = new TbItem();
-        tbItem.setId(Long.parseLong(id.toString()));
-        if (cid!=null){tbItem.setCid(Long.parseLong(cid.toString()));}
-        if (title!=null){ tbItem.setTitle(title);}
-        if (sellPoint!=null){ tbItem.setSellPoint(sellPoint);}
-        if (num!=null){ tbItem.setNum(num);}
-        if (price!=null){ tbItem.setPrice(Long.parseLong(price.toString()));}
-        return itemFeign.updateTbItem(tbItem,desc,itemParams);
-    }
-    @RequestMapping("preUpdateItem")
-    public Result preUpdateItem(Long itemId){
-        return itemFeign.preUpdateItem(itemId);
-    }
-    @RequestMapping("deleteItemById")
-    public Result deleteItemById(Long itemId){
-        return itemFeign.deleteItemById(itemId);
-    }
-*/
 }

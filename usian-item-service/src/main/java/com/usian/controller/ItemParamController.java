@@ -23,28 +23,18 @@ public class ItemParamController {
       return itemParamService.selectTbItemAllByPage();
     }
 
-/*
-
-    @RequestMapping("insertTbItem")
-    public Result insertTbItem(@RequestBody TbItem tbitem,@RequestParam String desc,@RequestParam String itemParams){
-      return itemService.insertTbItem(tbitem,desc,itemParams);
+    @RequestMapping("insertItemParam")
+    public Result insertItemParam(Long itemCatId,String paramData){
+      return itemParamService.insertItemParam(itemCatId,paramData);
     }
 
-    @RequestMapping("updateTbItem")
-    public Result updateTbItem(@RequestBody TbItem tbitem,@RequestParam String desc,@RequestParam String itemParams){
-      return itemService.updateTbItem(tbitem,desc,itemParams);
+
+    @RequestMapping("deleteItemParamById")
+    public Result deleteItemParamById( Long id){
+      return itemParamService.deleteItemParamById(id);
     }
 
-    @RequestMapping("preUpdateItem")
-    public Result preUpdateItem(@RequestBody Long itemId){
-      return itemService.preUpdateItem(itemId);
-    }
 
-    @RequestMapping("deleteItemById")
-    public Result deleteItemById(@RequestBody Long itemId){
-      return itemService.deleteItemById(itemId);
-    }
-*/
 
 }
 
