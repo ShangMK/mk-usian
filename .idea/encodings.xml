@@ -6,6 +6,8 @@
     <file url="file://$PROJECT_DIR$/common-mapper" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-pojo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-utils" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/usian-content-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/usian-content-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/usian-content-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/usian-item-feign" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/usian-item-service" charset="UTF-8" />

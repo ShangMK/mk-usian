@@ -1,6 +1,6 @@
 spring:
   application:
-    name: usian-item-web
+    name: usian-content-web
 server:
   port: 8092
 eureka:

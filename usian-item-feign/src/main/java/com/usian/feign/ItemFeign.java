@@ -48,25 +48,4 @@ public interface ItemFeign {
 
     @RequestMapping("itemparam/deleteItemParamById")
     Result deleteItemParamById(@RequestParam Long id);
-
-    @RequestMapping("contentcategory/selectContentCategoryByParentId")
-    Result selectContentCategoryByParentId(@RequestParam Long id);
-
-    @RequestMapping("contentcategory/selectTbContentAllByCategoryId")
-    Result selectTbContentAllByCategoryId(@RequestParam Long categoryId);
-
-    @RequestMapping("contentcategory/insertTbContent")
-    Result insertTbContent(@RequestBody TbContent tbContent);
-
-    @RequestMapping("contentcategory/deleteContentByIds")
-    Result deleteContentByIds(@RequestParam Long ids);
-
-    @RequestMapping("contentcategory/insertContentCategory")
-    Result insertContentCategory(@RequestBody TbContentCategory tbContentCategory);
-
-    @RequestMapping("contentcategory/updateContentCategory")
-    Result updateContentCategory(@RequestBody TbContentCategory tbContentCategory);
-
-    @RequestMapping("contentcategory/deleteContentCategoryById")
-    Result deleteContentCategoryById(@RequestParam Long categoryId);
 }

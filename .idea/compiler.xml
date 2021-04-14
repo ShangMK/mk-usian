@@ -10,6 +10,8 @@
         <module name="usianitemservice" />
         <module name="usianitemweb" />
         <module name="commonmapper" />
+        <module name="usiancontentfeign" />
+        <module name="usiancontentservice" />
         <module name="commonpojo" />
         <module name="commoneureka" />
         <module name="usiancontentweb" />
@@ -23,6 +25,8 @@
       <module name="commoneureka" options="-parameters" />
       <module name="commonmapper" options="-parameters" />
       <module name="commonpojo" options="-parameters" />
+      <module name="usiancontentfeign" options="-parameters" />
+      <module name="usiancontentservice" options="-parameters" />
       <module name="usiancontentweb" options="-parameters" />
       <module name="usianitemfeign" options="-parameters" />
       <module name="usianitemservice" options="-parameters" />

@@ -1,9 +1,8 @@
 package com.usian.controller;
 
-import com.usian.feign.ItemFeign;
+import com.usian.feign.ItemContentFeign;
 import com.usian.pojo.TbContent;
 import com.usian.pojo.TbContentCategory;
-import com.usian.utils.PageResult;
 import com.usian.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("content/")
 public class ContentCategoryController {
     @Autowired
-    ItemFeign itemFeign;
+    ItemContentFeign itemFeign;
 
     @RequestMapping("selectContentCategoryByParentId")
     public Result selectContentCategoryByParentId(@RequestParam(defaultValue = "0") Long id){
