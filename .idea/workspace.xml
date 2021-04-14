@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94bbf360-acca-45ae-9c4d-e9bfde314913" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/controller/ContentCategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/service/ContentCategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian-item-web/src/main/java/com/usian/controller/ContentCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian-item-feign/src/main/java/com/usian/feign/ItemFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian-item-feign/src/main/java/com/usian/feign/ItemFeign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian-item-feign/target/classes/com/usian/feign/ItemFeign.class" beforeDir="false" afterPath="$PROJECT_DIR$/usian-item-feign/target/classes/com/usian/feign/ItemFeign.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/controller/ItemParamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/controller/ItemParamController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/service/ItemParamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian-item-service/src/main/java/com/usian/service/ItemParamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian-item-web/src/main/java/com/usian/controller/ItemParamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian-item-web/src/main/java/com/usian/controller/ItemParamController.java" afterDir="false" />
-    </list>
+    <list default="true" id="94bbf360-acca-45ae-9c4d-e9bfde314913" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/common-mapper/target/" />
@@ -208,7 +198,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common-mapper/src/main/java/com/usian/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/usian-content-web/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -345,7 +335,7 @@
       <workItem from="1618198381656" duration="9786000" />
       <workItem from="1618280965000" duration="12753000" />
       <workItem from="1618312138177" duration="848000" />
-      <workItem from="1618316375082" duration="246000" />
+      <workItem from="1618316375082" duration="288000" />
     </task>
     <task id="LOCAL-00001" summary="上传">
       <created>1617940494538</created>
@@ -438,11 +428,18 @@
       <option name="project" value="LOCAL" />
       <updated>1618285404749</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="4/13">
+      <created>1618316636658</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1618316636658</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81678000" />
+    <option name="totallyTimeSpent" value="81720000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -455,6 +452,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.49781182" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -538,7 +536,8 @@
     <MESSAGE value="上传3" />
     <MESSAGE value="上传4" />
     <MESSAGE value="上传100" />
-    <option name="LAST_COMMIT_MESSAGE" value="上传100" />
+    <MESSAGE value="4/13" />
+    <option name="LAST_COMMIT_MESSAGE" value="4/13" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

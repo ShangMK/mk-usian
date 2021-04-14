@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: usian-item-web
+server:
+  port: 8092
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka/

@@ -12,6 +12,7 @@
         <module name="commonmapper" />
         <module name="commonpojo" />
         <module name="commoneureka" />
+        <module name="usiancontentweb" />
         <module name="common-utils" />
       </profile>
     </annotationProcessing>
@@ -22,6 +23,7 @@
       <module name="commoneureka" options="-parameters" />
       <module name="commonmapper" options="-parameters" />
       <module name="commonpojo" options="-parameters" />
+      <module name="usiancontentweb" options="-parameters" />
       <module name="usianitemfeign" options="-parameters" />
       <module name="usianitemservice" options="-parameters" />
       <module name="usianitemweb" options="-parameters" />
