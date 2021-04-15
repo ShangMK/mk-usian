@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: usian-person-itemcategory-web
+server:
+  port: 9090
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka/

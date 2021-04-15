@@ -13,12 +13,18 @@
         <module>common-eureka</module>
         <module>common-utils</module>
         <module>common-mapper</module>
+
         <module>usian-item-service</module>
         <module>usian-item-feign</module>
         <module>usian-item-web</module>
+
         <module>usian-content-web</module>
         <module>usian-content-feign</module>
         <module>usian-content-service</module>
+
+        <module>usian-person-itemcategory-feign</module>
+        <module>usian-person-itemcategory-web</module>
+        <module>usian-person-itemcategory-service</module>
     </modules>
 
     <!--Spring Boot 父工程-->

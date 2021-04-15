@@ -6,18 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="usianitemfeign" />
+        <module name="usiancontentfeign" />
         <module name="usianitemservice" />
         <module name="usianitemweb" />
         <module name="commonmapper" />
-        <module name="usiancontentfeign" />
-        <module name="usiancontentservice" />
-        <module name="commonpojo" />
-        <module name="commoneureka" />
         <module name="usiancontentweb" />
+        <module name="usianitemfeign" />
+        <module name="commonpojo" />
+        <module name="usian-person-itemcategory-feign" />
+        <module name="usiancontentservice" />
+        <module name="usianpersonitemcategoryservice" />
+        <module name="usianpersonitemcategoryweb" />
         <module name="common-utils" />
+        <module name="commoneureka" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="usianpersonitemcategoryfeign" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -25,12 +31,16 @@
       <module name="commoneureka" options="-parameters" />
       <module name="commonmapper" options="-parameters" />
       <module name="commonpojo" options="-parameters" />
+      <module name="usian-person-itemcategory-feign" options="-parameters" />
       <module name="usiancontentfeign" options="-parameters" />
       <module name="usiancontentservice" options="-parameters" />
       <module name="usiancontentweb" options="-parameters" />
       <module name="usianitemfeign" options="-parameters" />
       <module name="usianitemservice" options="-parameters" />
       <module name="usianitemweb" options="-parameters" />
+      <module name="usianpersonitemcategoryfeign" options="-parameters" />
+      <module name="usianpersonitemcategoryservice" options="-parameters" />
+      <module name="usianpersonitemcategoryweb" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: usian-person-itemcategory-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/usian?characterEncoding=UTF-8
+    username: root
+    password: "123456."
+    type: com.alibaba.druid.pool.DruidDataSource
+server:
+  port: 9091
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka/
+#大广告位图片信息
+AD_CATEGORY_ID: 89
+AD_HEIGHT: 240
+AD_WIDTH: 670
+AD_HEIGHTB: 240
+AD_WIDTHB: 550
