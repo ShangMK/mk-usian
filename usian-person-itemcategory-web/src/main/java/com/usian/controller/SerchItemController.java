@@ -14,7 +14,11 @@ import java.util.List;
 public class SerchItemController {
     @Autowired
     PersonItemCategoryFeign personItemCategoryFeign;
-
+/*
+    @RequestMapping("list")
+    public List<?> list(@RequestParam(defaultValue = "1") String q){
+        return personItemCategoryFeign.list(q);
+    }*/
     @RequestMapping("list")
     public List<?> list(@RequestParam(defaultValue = "1") String q){
         return personItemCategoryFeign.list(q);

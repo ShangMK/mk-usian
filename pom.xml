@@ -25,6 +25,10 @@
         <module>usian-person-itemcategory-feign</module>
         <module>usian-person-itemcategory-web</module>
         <module>usian-person-itemcategory-service</module>
+        <module>usian-fontren-detail0-web</module>
+        <module>usian-froned-details-feign</module>
+        <module>usian-froed-details-service</module>
+        <module>common-redis</module>
     </modules>
 
     <!--Spring Boot 父工程-->

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface ItemFeign {
 
     @RequestMapping("service/selectTbItemAllByPage")
-    Result selectTbItemAllByPage(@RequestParam Integer page,@RequestParam Integer rows);
+    Result selectTbItemAllByPage(@RequestParam Integer page, @RequestParam Integer rows);
 
     @RequestMapping("itemcat/selectItemCategoryByParentId")
     Result selectItemCategoryByParentId(@RequestParam Integer id);
@@ -31,20 +31,20 @@ public interface ItemFeign {
     Result preUpdateItem(@RequestBody Long itemId);
 
     @RequestMapping("service/updateTbItem")
-    Result updateTbItem(@RequestBody TbItem tbItem,@RequestParam String desc,@RequestParam String itemParams);
+    Result updateTbItem(@RequestBody TbItem tbItem, @RequestParam String desc, @RequestParam String itemParams);
 
     @RequestMapping("service/deleteItemById")
     Result deleteItemById(@RequestBody Long itemId);
 
 
     @RequestMapping("service/insertTbItem")
-    Result insertTbItem(@RequestBody TbItem tbitem,@RequestParam String desc,@RequestParam String itemParams);
+    Result insertTbItem(@RequestBody TbItem tbitem, @RequestParam String desc, @RequestParam String itemParams);
 
     @RequestMapping("itemparam/selectItemParamAll")
     PageResult selectItemParamAll();
 
     @RequestMapping("itemparam/insertItemParam")
-    Result insertItemParam(@RequestParam Long itemCatId,@RequestParam String paramData);
+    Result insertItemParam(@RequestParam Long itemCatId, @RequestParam String paramData);
 
     @RequestMapping("itemparam/deleteItemParamById")
     Result deleteItemParamById(@RequestParam Long id);

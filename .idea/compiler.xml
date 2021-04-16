@@ -6,22 +6,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="usiancontentfeign" />
-        <module name="usianitemservice" />
-        <module name="usianitemweb" />
         <module name="commonmapper" />
-        <module name="usiancontentweb" />
-        <module name="usianitemfeign" />
-        <module name="commonpojo" />
-        <module name="usian-person-itemcategory-feign" />
-        <module name="usiancontentservice" />
+        <module name="usianfroeddetailsservice" />
         <module name="usianpersonitemcategoryservice" />
+        <module name="usianitemservice" />
+        <module name="commonredis" />
+        <module name="commonpojo" />
+        <module name="usiancontentservice" />
+        <module name="usianfontrendetail0web" />
+        <module name="usiancontentweb" />
+        <module name="usian-person-itemcategory-feign" />
+        <module name="usiancontentfeign" />
+        <module name="usianitemweb" />
         <module name="usianpersonitemcategoryweb" />
         <module name="common-utils" />
+        <module name="usianfroneddetailsfeign" />
+        <module name="usianitemfeign" />
         <module name="commoneureka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="commonservice" target="1.8" />
       <module name="usianpersonitemcategoryfeign" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -31,10 +36,15 @@
       <module name="commoneureka" options="-parameters" />
       <module name="commonmapper" options="-parameters" />
       <module name="commonpojo" options="-parameters" />
+      <module name="commonredis" options="-parameters" />
+      <module name="commonservice" options="-parameters" />
       <module name="usian-person-itemcategory-feign" options="-parameters" />
       <module name="usiancontentfeign" options="-parameters" />
       <module name="usiancontentservice" options="-parameters" />
       <module name="usiancontentweb" options="-parameters" />
+      <module name="usianfontrendetail0web" options="-parameters" />
+      <module name="usianfroeddetailsservice" options="-parameters" />
+      <module name="usianfroneddetailsfeign" options="-parameters" />
       <module name="usianitemfeign" options="-parameters" />
       <module name="usianitemservice" options="-parameters" />
       <module name="usianitemweb" options="-parameters" />

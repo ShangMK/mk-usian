@@ -5,6 +5,7 @@ import com.usian.service.SeachItemService;
 import com.usian.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class SerchItemControllers {
     SeachItemService seachItemService;
 
     @RequestMapping("list")
-    public ArrayList<Object> list(String q){
+    public ArrayList<Object> list(@RequestParam String q){
         return seachItemService.list(q);
     };
 }

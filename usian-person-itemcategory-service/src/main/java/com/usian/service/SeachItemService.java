@@ -4,6 +4,7 @@ import com.usian.mapper.TbItemCatMapper;
 import com.usian.mapper.TbItemDescMapper;
 import com.usian.mapper.TbItemMapper;
 import com.usian.pojo.*;
+import com.usian.utils.PageResult;
 import com.usian.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,7 @@ public class SeachItemService {
         TbItemExample tbItemExample = new TbItemExample();
         TbItemExample.Criteria criteria = tbItemExample.createCriteria();
         criteria.andStatusEqualTo((byte)1);
+        tbItemExample.setOrderByClause("created asc");
         List<TbItem> tbItems = tbItemMapper.selectByExample(null);
         for (TbItem tbItem : tbItems) {
             TbItemDesc tbItemDesc = tbItemDescMapper.selectByPrimaryKey(tbItem.getId());

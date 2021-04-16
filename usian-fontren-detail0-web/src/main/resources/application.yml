@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: usian-fron-detail-web
+server:
+  port: 9094
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka/

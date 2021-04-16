@@ -5,10 +5,8 @@ import com.usian.mapper.TbItemCatMapper;
 import com.usian.pojo.TbContent;
 import com.usian.pojo.TbItemCat;
 import com.usian.pojo.TbItemCatExample;
-import com.usian.utils.AdNode;
-import com.usian.utils.CatNode;
-import com.usian.utils.CatResult;
-import com.usian.utils.Result;
+import com.usian.redisconfig.RedisClient;
+import com.usian.utils.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -32,6 +30,15 @@ public class ItemCategoryServices {
 
     @Value("${AD_WIDTHB}")
     private Integer AD_WIDTHB;
+
+    @Value("${PROTAL_CATRESULT_KEY}")
+    private String portal_catresult_redis_key;
+
+    @Value("${PORTAL_AD_KEY}")
+    private String protal;
+
+    @Autowired
+    RedisClient redisClient;
 
     @Autowired
     TbItemCatMapper tbItemCatMapper;
@@ -72,18 +79,25 @@ public class ItemCategoryServices {
     }
     public Result selectItemCategoryAll() {
         CatResult catResult = new CatResult();
-        ArrayList<Object> arrayList = new ArrayList<>();
-        //查出根类标题集合
-        List<TbItemCat> oneitemCats = this.getParentId(Long.parseLong("0"));
-
-        //遍历父节点
-        for (TbItemCat oneitemCat : oneitemCats) {
-            CatNode catNode = new CatNode();
-            catNode.setName(oneitemCat.getName());
-            catNode.setItem(this.getchildrehashmap(oneitemCat.getId()));
-            arrayList.add(catNode);
+        if (redisClient.exists(portal_catresult_redis_key)) {
+            System.out.println("redis----");
+            String ca = (String) redisClient.get(portal_catresult_redis_key);
+            catResult = JsonUtils.jsonToPojo(ca, CatResult.class);
+        }else{
+            ArrayList<Object> arrayList = new ArrayList<>();
+            //查出根类标题集合
+            List<TbItemCat> oneitemCats = this.getParentId(Long.parseLong("0"));
+            //遍历父节点
+            for (TbItemCat oneitemCat : oneitemCats) {
+                CatNode catNode = new CatNode();
+                catNode.setName(oneitemCat.getName());
+                catNode.setItem(this.getchildrehashmap(oneitemCat.getId()));
+                arrayList.add(catNode);
+            }
+            catResult.setData(arrayList);
+            System.out.println("mysql---");
+            redisClient.set(portal_catresult_redis_key, JsonUtils.objectToJson(catResult));
         }
-        catResult.setData(arrayList);
         return Result.ok(catResult);
     }
 
@@ -92,20 +106,29 @@ public class ItemCategoryServices {
 
     public Result selectFrontendContentByAD() {
         try {
-            List<TbContent> tbContents = tbContentMapper.selectByExample(null);
-            ArrayList<AdNode> list = new ArrayList<>();
-            for (TbContent tbContent : tbContents) {
-                AdNode adNode = new AdNode();
-                adNode.setSrc(tbContent.getPic());
-                adNode.setSrcB(tbContent.getPic2());
-                adNode.setHref(tbContent.getUrl());
-                adNode.setHeight(AD_HEIGHT);
-                adNode.setWidth(AD_WIDTH);
-                adNode.setHeightB(AD_HEIGHTB);
-                adNode.setWidthB(AD_WIDTHB);
-                list.add(adNode);
+            if (redisClient.exists(protal)){
+                System.out.println("首页大广告--redis");
+                String o = (String) redisClient.get(protal);
+                List<AdNode> adNodes = JsonUtils.jsonToList(o, AdNode.class);
+                return Result.ok(adNodes);
+            }else {
+                List<TbContent> tbContents = tbContentMapper.selectByExample(null);
+                ArrayList<AdNode> list = new ArrayList<>();
+                for (TbContent tbContent : tbContents) {
+                    AdNode adNode = new AdNode();
+                    adNode.setSrc(tbContent.getPic());
+                    adNode.setSrcB(tbContent.getPic2());
+                    adNode.setHref(tbContent.getUrl());
+                    adNode.setHeight(AD_HEIGHT);
+                    adNode.setWidth(AD_WIDTH);
+                    adNode.setHeightB(AD_HEIGHTB);
+                    adNode.setWidthB(AD_WIDTHB);
+                    list.add(adNode);
+                }
+                System.out.println("打广告 mysql ---");
+                redisClient.set(protal, JsonUtils.objectToJson(list));
+                return Result.ok(list);
             }
-            return Result.ok(list);
         } catch (Exception e) {
             return Result.error("999");
         }
