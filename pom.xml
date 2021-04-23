@@ -25,10 +25,24 @@
         <module>usian-person-itemcategory-feign</module>
         <module>usian-person-itemcategory-web</module>
         <module>usian-person-itemcategory-service</module>
+
         <module>usian-fontren-detail0-web</module>
         <module>usian-froned-details-feign</module>
         <module>usian-froed-details-service</module>
+
         <module>common-redis</module>
+
+        <module>usian-seach-service</module>
+        <module>usian-seach-feign</module>
+        <module>usian-seach-web</module>
+
+        <module>usian-sso-web</module>
+        <module>usian-sso-service</module>
+        <module>usian-sso-feign</module>
+
+        <module>usian_cart_service</module>
+        <module>usian_cart_feign</module>
+        <module>usian_cart_web</module>
     </modules>
 
     <!--Spring Boot 父工程-->

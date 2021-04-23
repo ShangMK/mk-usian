@@ -1,6 +1,5 @@
 package com.usian.service;
 
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.usian.mapper.TbItemCatMapper;
@@ -8,9 +7,11 @@ import com.usian.mapper.TbItemDescMapper;
 import com.usian.mapper.TbItemMapper;
 import com.usian.mapper.TbItemParamItemMapper;
 import com.usian.pojo.*;
+import com.usian.redisconfig.RedisClient;
 import com.usian.utils.IDUtils;
 import com.usian.utils.PageResult;
 import com.usian.utils.Result;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +28,10 @@ public class ItemService {
     TbItemDescMapper tbItemDescMapper;
     @Autowired
     TbItemParamItemMapper tbItemParamItemMapper;
+    @Autowired
+    AmqpTemplate amqpTemplate;
+    @Autowired
+    RedisClient redisClient;
 
     public Result selectTbItemAllByPage(Integer page,Integer rows) {
         Result result = new Result();
@@ -79,6 +84,12 @@ public class ItemService {
             tbItemParamItem.setCreated(date);
             tbItemParamItem.setUpdated(date);
             tbItemParamItemMapper.insertSelective(tbItemParamItem);
+
+            amqpTemplate.convertAndSend("item_exchage", "item.add",String.valueOf(id));
+
+            redisClient.del("item");
+            redisClient.del("tbitemparamitem");
+            redisClient.del("itemdesc");
             return Result.ok("成功");
         }
         catch (Exception e){
@@ -142,7 +153,9 @@ public class ItemService {
             tbItemParamItem.setUpdated(date);
             tbItemParamItem.setId(tbItemParamItems.get(0).getId());
             tbItemParamItemMapper.updateByPrimaryKeySelective(tbItemParamItem);
-
+            redisClient.del("item");
+            redisClient.del("tbitemparamitem");
+            redisClient.del("itemdesc");
             result.setStatus(200);
             result.setMsg("成功");
         }
@@ -162,6 +175,9 @@ public class ItemService {
             tbItemMapper.updateByPrimaryKeySelective(tbItem);
             result.setStatus(200);
             result.setMsg("成功");
+            redisClient.del("item");
+            redisClient.del("tbitemparamitem");
+            redisClient.del("itemdesc");
         }
         catch (Exception e){
             result.setStatus(400);

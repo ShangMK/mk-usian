@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 
-public class SeachItem implements Serializable {
+public class SearchItem implements Serializable {
     private Long id;
 
     private String item_title;

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: usian-cat-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/usian?characterEncoding=UTF-8
+    username: root
+    password: "123456."
+    type: com.alibaba.druid.pool.DruidDataSource
+server:
+  port: 9061
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka/
+EXPRIE: 3600

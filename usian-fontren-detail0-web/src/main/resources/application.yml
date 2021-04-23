@@ -7,3 +7,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8888/eureka/
+#全局配置
+#请求连接的超时时间
+ribbon:
+  ConnectTimeout: 60000
+  #请求处理的超时时间
+  ReadTimeout: 60000

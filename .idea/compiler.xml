@@ -6,51 +6,63 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="commonmapper" />
-        <module name="usianfroeddetailsservice" />
-        <module name="usianpersonitemcategoryservice" />
-        <module name="usianitemservice" />
-        <module name="commonredis" />
-        <module name="commonpojo" />
-        <module name="usiancontentservice" />
-        <module name="usianfontrendetail0web" />
-        <module name="usiancontentweb" />
+        <module name="usian-content-feign" />
+        <module name="usian-froed-details-service" />
+        <module name="usian-fontren-detail0-web" />
+        <module name="usianssoweb" />
+        <module name="usian-froned-details-feign" />
+        <module name="usian-person-itemcategory-web" />
         <module name="usian-person-itemcategory-feign" />
-        <module name="usiancontentfeign" />
-        <module name="usianitemweb" />
-        <module name="usianpersonitemcategoryweb" />
+        <module name="usian-person-itemcategory-service" />
+        <module name="usian_cart_feign" />
+        <module name="common-pojo" />
+        <module name="usian-content-service" />
+        <module name="usian_cart_web" />
+        <module name="usian-seach-web" />
+        <module name="common-eureka" />
+        <module name="common-mapper" />
+        <module name="common-redis" />
+        <module name="usian_cart_service" />
+        <module name="usian-seach-service" />
         <module name="common-utils" />
-        <module name="usianfroneddetailsfeign" />
-        <module name="usianitemfeign" />
-        <module name="commoneureka" />
+        <module name="usian-item-web" />
+        <module name="usian-item-feign" />
+        <module name="usianssofeign" />
+        <module name="usian-seach-feign" />
+        <module name="usianssoservice" />
+        <module name="usian-content-web" />
+        <module name="usian-item-service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="commonservice" target="1.8" />
-      <module name="usianpersonitemcategoryfeign" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common-eureka" options="-parameters" />
+      <module name="common-mapper" options="-parameters" />
+      <module name="common-pojo" options="-parameters" />
+      <module name="common-redis" options="-parameters" />
       <module name="common-utils" options="-parameters" />
-      <module name="commoneureka" options="-parameters" />
-      <module name="commonmapper" options="-parameters" />
-      <module name="commonpojo" options="-parameters" />
-      <module name="commonredis" options="-parameters" />
-      <module name="commonservice" options="-parameters" />
+      <module name="usian-content-feign" options="-parameters" />
+      <module name="usian-content-service" options="-parameters" />
+      <module name="usian-content-web" options="-parameters" />
+      <module name="usian-fontren-detail0-web" options="-parameters" />
+      <module name="usian-froed-details-service" options="-parameters" />
+      <module name="usian-froned-details-feign" options="-parameters" />
+      <module name="usian-item-feign" options="-parameters" />
+      <module name="usian-item-service" options="-parameters" />
+      <module name="usian-item-web" options="-parameters" />
       <module name="usian-person-itemcategory-feign" options="-parameters" />
-      <module name="usiancontentfeign" options="-parameters" />
-      <module name="usiancontentservice" options="-parameters" />
-      <module name="usiancontentweb" options="-parameters" />
-      <module name="usianfontrendetail0web" options="-parameters" />
-      <module name="usianfroeddetailsservice" options="-parameters" />
-      <module name="usianfroneddetailsfeign" options="-parameters" />
-      <module name="usianitemfeign" options="-parameters" />
-      <module name="usianitemservice" options="-parameters" />
-      <module name="usianitemweb" options="-parameters" />
-      <module name="usianpersonitemcategoryfeign" options="-parameters" />
-      <module name="usianpersonitemcategoryservice" options="-parameters" />
-      <module name="usianpersonitemcategoryweb" options="-parameters" />
+      <module name="usian-person-itemcategory-service" options="-parameters" />
+      <module name="usian-person-itemcategory-web" options="-parameters" />
+      <module name="usian-seach-feign" options="-parameters" />
+      <module name="usian-seach-service" options="-parameters" />
+      <module name="usian-seach-web" options="-parameters" />
+      <module name="usian_cart_feign" options="-parameters" />
+      <module name="usian_cart_service" options="-parameters" />
+      <module name="usian_cart_web" options="-parameters" />
+      <module name="usianssofeign" options="-parameters" />
+      <module name="usianssoservice" options="-parameters" />
+      <module name="usianssoweb" options="-parameters" />
     </option>
   </component>
 </project>

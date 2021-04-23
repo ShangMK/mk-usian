@@ -8,6 +8,7 @@ import com.usian.pojo.TbContent;
 import com.usian.pojo.TbContentCategory;
 import com.usian.pojo.TbContentCategoryExample;
 import com.usian.pojo.TbContentExample;
+import com.usian.redisconfig.RedisClient;
 import com.usian.utils.PageResult;
 import com.usian.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,8 @@ public class ContentCategoryService {
     TbContentCategoryMapper tbContentCategoryMapper;
     @Autowired
     TbContentMapper tbContentMapper;
+    @Autowired
+    RedisClient redisClient;
 
     public Result selectContentCategoryByParentId(Long id) {
         try {
@@ -44,6 +47,7 @@ public class ContentCategoryService {
             tbContentCategory.setUpdated(date);
             tbContentCategory.setSortOrder(1);
             tbContentCategoryMapper.insertSelective(tbContentCategory);
+            redisClient.del("PORTAL_AD_KEY");
             return Result.ok();
         } catch (Exception e) {
             return Result.error("SHow leak");
@@ -55,6 +59,7 @@ public class ContentCategoryService {
             Date date = new Date();
             tbContentCategory.setUpdated(date);
             tbContentCategoryMapper.updateByPrimaryKeySelective(tbContentCategory);
+            redisClient.del("PORTAL_AD_KEY");
             return Result.ok();
         } catch (Exception e) {
             return Result.error("SHow leak");
@@ -89,6 +94,7 @@ public class ContentCategoryService {
             tbContent.setCreated(date);
             tbContent.setUpdated(date);
             tbContentMapper.insertSelective(tbContent);
+            redisClient.del("PROTAL_CATRESULT_KEY");
             return Result.ok();
         } catch (Exception e) {
             return Result.error("SHow leak");
@@ -98,6 +104,7 @@ public class ContentCategoryService {
     public Result deleteContentByIds(Long ids) {
         try {
             tbContentMapper.deleteByPrimaryKey(ids);
+            redisClient.del("PROTAL_CATRESULT_KEY");
             return Result.ok();
         } catch (Exception e) {
             return Result.error("SHow leak");
@@ -123,6 +130,7 @@ public class ContentCategoryService {
             tbContentCategory1.setStatus(0);
             tbContentCategory1.setId(categoryId);
             tbContentCategoryMapper.updateByPrimaryKeySelective(tbContentCategory1);
+            redisClient.del("PORTAL_AD_KEY");
             return Result.ok();
         } catch (Exception e) {
             return Result.error("SHow leak");
