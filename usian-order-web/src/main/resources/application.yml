@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: usian-order-web
+server:
+  port: 9071
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka/

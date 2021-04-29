@@ -23,4 +23,7 @@ public interface SsoFeign {
 
     @RequestMapping("ssoservice/getUserByToken")
     Result getUserByToken(@RequestParam String token);
+
+    @RequestMapping("ssoservice/findByname")
+    TbUser findByname(@RequestParam  String username);
 }

@@ -40,9 +40,12 @@
         <module>usian-sso-service</module>
         <module>usian-sso-feign</module>
 
-        <module>usian_cart_service</module>
-        <module>usian_cart_feign</module>
-        <module>usian_cart_web</module>
+        <module>usian-cart-service</module>
+        <module>usian-cart-feign</module>
+        <module>usian-cart-web</module>
+        <module>usian-order-service</module>
+        <module>usian-order-feign</module>
+        <module>usian-order-web</module>
     </modules>
 
     <!--Spring Boot 父工程-->

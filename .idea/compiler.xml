@@ -6,34 +6,40 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="usian-item-web" />
         <module name="usian-content-feign" />
-        <module name="usian-froed-details-service" />
+        <module name="common-redis" />
+        <module name="usian-content-web" />
+        <module name="usianorderweb" />
         <module name="usian-fontren-detail0-web" />
         <module name="usianssoweb" />
-        <module name="usian-froned-details-feign" />
         <module name="usian-person-itemcategory-web" />
         <module name="usian-person-itemcategory-feign" />
+        <module name="usian-seach-service" />
         <module name="usian-person-itemcategory-service" />
-        <module name="usian_cart_feign" />
-        <module name="common-pojo" />
-        <module name="usian-content-service" />
-        <module name="usian_cart_web" />
+        <module name="usian-item-feign" />
+        <module name="usianorderservice" />
+        <module name="usian-cart-feign" />
         <module name="usian-seach-web" />
         <module name="common-eureka" />
+        <module name="usian_cart_web" />
+        <module name="usian-froned-details-feign" />
         <module name="common-mapper" />
-        <module name="common-redis" />
-        <module name="usian_cart_service" />
-        <module name="usian-seach-service" />
+        <module name="usianorderfeign" />
         <module name="common-utils" />
-        <module name="usian-item-web" />
-        <module name="usian-item-feign" />
+        <module name="usian-froed-details-service" />
+        <module name="usian-content-service" />
+        <module name="usian-cart-service" />
         <module name="usianssofeign" />
         <module name="usian-seach-feign" />
         <module name="usianssoservice" />
-        <module name="usian-content-web" />
+        <module name="common-pojo" />
         <module name="usian-item-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="usian-cart-web" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -42,6 +48,9 @@
       <module name="common-pojo" options="-parameters" />
       <module name="common-redis" options="-parameters" />
       <module name="common-utils" options="-parameters" />
+      <module name="usian-cart-feign" options="-parameters" />
+      <module name="usian-cart-service" options="-parameters" />
+      <module name="usian-cart-web" options="-parameters" />
       <module name="usian-content-feign" options="-parameters" />
       <module name="usian-content-service" options="-parameters" />
       <module name="usian-content-web" options="-parameters" />
@@ -57,9 +66,10 @@
       <module name="usian-seach-feign" options="-parameters" />
       <module name="usian-seach-service" options="-parameters" />
       <module name="usian-seach-web" options="-parameters" />
-      <module name="usian_cart_feign" options="-parameters" />
-      <module name="usian_cart_service" options="-parameters" />
       <module name="usian_cart_web" options="-parameters" />
+      <module name="usianorderfeign" options="-parameters" />
+      <module name="usianorderservice" options="-parameters" />
+      <module name="usianorderweb" options="-parameters" />
       <module name="usianssofeign" options="-parameters" />
       <module name="usianssoservice" options="-parameters" />
       <module name="usianssoweb" options="-parameters" />

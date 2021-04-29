@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: usian-order-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/usian?characterEncoding=UTF-8
+    username: root
+    password: "123456."
+    type: com.alibaba.druid.pool.DruidDataSource
+  rabbitmq:
+    host: 192.168.2.101
+    username: admin
+    password: 1111
+    virtual-host: /usian
+    publisher-confirms: true
+    publisher-returns: true
+server:
+  port: 9072
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka/
+ORDER_ID: "ORDER_ID"
+ORDER_BEGIN: 1
+ORDER_INITNUMER: 152369

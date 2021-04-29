@@ -1,20 +1,22 @@
 package com.usian.service;
 
 import com.usian.mapper.TbUserMapper;
+import com.usian.pojo.TbItem;
 import com.usian.pojo.TbUser;
 import com.usian.pojo.TbUserExample;
 import com.usian.redisconfig.RedisClient;
+import com.usian.utils.CookieUtils;
 import com.usian.utils.JsonUtils;
 import com.usian.utils.MD5Utils;
 import com.usian.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.UUID;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.*;
 
 @Service
 public class SsoService {
@@ -23,8 +25,9 @@ public class SsoService {
     @Autowired
     RedisClient redisClient;
     @Value("${EXPRIE}")
-
     Long EXPRIE;
+
+
     public Result userRegister(TbUser tbUser) {
         try {
             String digest = MD5Utils.digest(tbUser.getPassword());
@@ -96,5 +99,16 @@ public class SsoService {
         } catch (Exception e) {
             return Result.error("错误");
         }
+    }
+
+    public TbUser findByname(String username) {
+        TbUserExample tbUserExample = new TbUserExample();
+        TbUserExample.Criteria criteria = tbUserExample.createCriteria();
+        criteria.andUsernameEqualTo(username);
+        List<TbUser> tbUsers = tbUserMapper.selectByExample(tbUserExample);
+        if (tbUsers != null && tbUsers.size() > 0) {
+            return tbUsers.get(0);
+        }
+        return null;
     }
 }

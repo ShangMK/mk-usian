@@ -2,10 +2,7 @@ package com.usian.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.usian.mapper.TbItemCatMapper;
-import com.usian.mapper.TbItemDescMapper;
-import com.usian.mapper.TbItemMapper;
-import com.usian.mapper.TbItemParamItemMapper;
+import com.usian.mapper.*;
 import com.usian.pojo.*;
 import com.usian.redisconfig.RedisClient;
 import com.usian.utils.IDUtils;
@@ -32,7 +29,8 @@ public class ItemService {
     AmqpTemplate amqpTemplate;
     @Autowired
     RedisClient redisClient;
-
+    @Autowired
+    TbOrderItemMapper tbOrderItemMapper;
     public Result selectTbItemAllByPage(Integer page,Integer rows) {
         Result result = new Result();
         try {
@@ -184,5 +182,26 @@ public class ItemService {
             result.setMsg("错误");
         }
         return result;
+    }
+
+    /**
+     * 根据订单id减少库存数量
+     *
+     * @param orderId
+     */
+    public int orderDeleteNum(String orderId) {
+        TbOrderItemExample tbOrderItemExample = new TbOrderItemExample();
+        TbOrderItemExample.Criteria criteria = tbOrderItemExample.createCriteria();
+        criteria.andOrderIdEqualTo(orderId);
+        int count=0;
+        List<TbOrderItem> tbOrderItems = tbOrderItemMapper.selectByExample(tbOrderItemExample);
+        for (TbOrderItem tbOrderItem : tbOrderItems) {
+            TbItem tbItem = tbItemMapper.selectByPrimaryKey(Long.parseLong(tbOrderItem.getItemId()));
+            tbItem.setNum(tbItem.getNum() - tbOrderItem.getNum());
+            int i = tbItemMapper.updateByPrimaryKeySelective(tbItem);
+            count+=i;
+        }
+        System.out.println(count);
+        return count;
     }
 }
