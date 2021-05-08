@@ -7,3 +7,4 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8888/eureka/
+logging.level.org.springframework.boot.autoconfigure: error

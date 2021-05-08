@@ -6,6 +6,7 @@
     <file url="file://$PROJECT_DIR$/common-mapper" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-pojo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-usian-zuul" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-utils" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/usian-cart-feign" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/usian-cart-service" charset="UTF-8" />

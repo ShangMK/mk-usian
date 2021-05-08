@@ -46,6 +46,7 @@
         <module>usian-order-service</module>
         <module>usian-order-feign</module>
         <module>usian-order-web</module>
+        <module>common-usian-zuul</module>
     </modules>
 
     <!--Spring Boot 父工程-->

@@ -1,0 +1,19 @@
+# 服务端口号
+server:
+  port: 6001
+spring:
+  application:
+    name: usian-zuul-gateway # 对外暴露的服务名称
+# 客户端注册进eureka服务列
+zuul:
+  routes:
+    www.serviceId: usian-content-web # 映射的微服务名称
+    www.path: /www/** # 需要路由的路径，/**的目的是/后面的多层路径的文件都支持访问
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka/ #,http://eureka02:7002/eureka/,http://eureka03:7003/eureka/,
+
+
+
+

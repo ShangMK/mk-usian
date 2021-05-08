@@ -4,18 +4,23 @@ import com.usian.feign.ItemContentFeign;
 import com.usian.pojo.TbContent;
 import com.usian.pojo.TbContentCategory;
 import com.usian.utils.Result;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("content/")
+@RequestMapping("content")
+@Api("usian商城swage管理")
 public class ContentCategoryController {
     @Autowired
     ItemContentFeign itemFeign;
 
-    @RequestMapping("selectContentCategoryByParentId")
+    @GetMapping("selectContentCategoryByParentId")
+    @ApiOperation("查询管理")
     public Result selectContentCategoryByParentId(@RequestParam(defaultValue = "0") Long id){
        return itemFeign.selectContentCategoryByParentId(id);
     }
@@ -47,5 +52,10 @@ public class ContentCategoryController {
     @RequestMapping("updateContentCategory")
     public Result updateContentCategory(TbContentCategory tbContentCategory){
         return itemFeign.updateContentCategory(tbContentCategory);
+    }
+
+    @RequestMapping("hello")
+    public String hello(){
+        return "hellohellohellohellohellohellohellohellohellohellohello";
     }
 }
